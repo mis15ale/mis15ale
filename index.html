@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es" itemscope="" itemtype="http://schema.org/WebPage">
 <head>
+    <meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,14 +29,20 @@
     <script nonce=""></script>
     <title></title>
     <style>
-       html, body {
+    /* Force white background in ALL rendering modes */
+  html, body {
     background: #ffffff !important;
     margin: 0;
     padding: 0;
     height: 100%;
   }
 
-  /* Override dark mode specifically */
+  /* Tell browsers that only LIGHT mode is allowed */
+  html {
+    color-scheme: light;
+  }
+
+  /* Override dark mode attempts on iOS and Android */
   @media (prefers-color-scheme: dark) {
     html, body {
       background: #ffffff !important;
